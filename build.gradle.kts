@@ -24,9 +24,12 @@ tasks.register("Selam") {
         }
 }
 
-tasks.register("clean") {
+tasks.named("clean") {
         doLast{
                 println("Default cleaning!!")
+        }
+        doFirst{
+                println("Do First in the clean task")
         }
 }
 
@@ -45,3 +48,7 @@ tasks.register("otherDefaultTask") {
 }
 
 defaultTasks("clean", "run", "otherDefaultTask")
+
+plugins {
+        `java-library`
+}
