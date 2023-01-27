@@ -50,5 +50,5 @@ tasks.register("otherDefaultTask") {
 defaultTasks("clean", "run", "otherDefaultTask")
 
 plugins {
-        `java-library`
+        `java`
 }
